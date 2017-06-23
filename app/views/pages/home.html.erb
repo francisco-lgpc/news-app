@@ -10,41 +10,20 @@
   <h3 class="text-center"> Top articles for you </h3>
   <br>
   <div class="row">
-    <div class="col-xs-12 col-sm-4">
-      <%= link_to '#', class: 'card-link' do %>
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('background.jpg');">
-          <div class="card-category">Popular</div>
-          <div class="card-description">
-            <h2>Some stuff</h2>
-            <p>Very cool stuff, useful and smart</p>
+
+    <% @articles.each do |article| %>
+      <div class="col-xs-12 col-sm-4">
+        <%= link_to article, class: 'card-link' do %>
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('background.jpg');">
+            <div class="card-category">Popular</div>
+            <div class="card-description">
+              <h2>Some stuff</h2>
+              <p>Very cool stuff, useful and smart</p>
+            </div>
+            <%= image_tag 'user.jpg', class: 'card-user avatar' %>
           </div>
-          <%= image_tag 'user.jpg', class: 'card-user avatar' %>
-        </div>
-      <% end %>
-    </div>
-    <div class="col-xs-12 col-sm-4">
-      <%= link_to '#', class: 'card-link' do %>
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('background.jpg');">
-          <div class="card-category">Popular</div>
-          <div class="card-description">
-            <h2>Some stuff</h2>
-            <p>Very cool stuff, useful and smart</p>
-          </div>
-          <%= image_tag 'user.jpg', class: 'card-user avatar' %>
-        </div>
-      <% end %>
-    </div>
-    <div class="col-xs-12 col-sm-4">
-      <%= link_to '#', class: 'card-link' do %>
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('background.jpg');">
-          <div class="card-category">Popular</div>
-          <div class="card-description">
-            <h2>Some stuff</h2>
-            <p>Very cool stuff, useful and smart</p>
-          </div>
-          <%= image_tag 'user.jpg', class: 'card-user avatar' %>
-        </div>
-      <% end %>
-    </div>
+        <% end %>
+      </div>
+    <% end %>
   </div>
 </div>

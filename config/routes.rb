@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
-  get 'articles/index'
-
-  get 'articles/show'
+  resources :articles, only: [:index, :show]
 
   devise_for :users
   root to: 'pages#home'

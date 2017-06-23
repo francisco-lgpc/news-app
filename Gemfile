@@ -17,6 +17,8 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 
+gem "paperclip", "~> 5.0.0"
+
 group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
