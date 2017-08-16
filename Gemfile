@@ -17,7 +17,8 @@ gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
 
-gem "paperclip", "~> 5.0.0"
+gem 'carrierwave', '~> 0.11.2'
+gem 'carrierwave-audio'
 
 group :development, :test do
   gem 'better_errors'
