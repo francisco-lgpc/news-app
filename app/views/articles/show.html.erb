@@ -1,2 +1,4 @@
 
-<td><%= audio_tag(@article.content, autoplay: true, controls: true) %></td>
+<h1> <%= @article.title %> </h1>
+
+<%= audio_tag(@article.audio, autoplay: true, controls: true) %>
